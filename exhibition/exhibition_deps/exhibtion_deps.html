@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exhibtion</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../css/exhibition_deps.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+
+    <script src="../script/jquery-1.12.4.min.js"></script>
+    <script src="../../script/search.js"></script>
+    
+    <script src="../script/exhibition_deps_sticky.js"></script>
+    <script src="../script/exhibition_reserve.js"></script>
+    <script src="../../script/footer_marquee.js"></script>
+    <link rel="stylesheet" href="../css/exhibition_deps_mdeia.css">
+</head>
+
+<body>
+    <!-- 헤더 -->
+   <header>
+    <div class="header-wrap">
+      <div class="logo">
+        <a href="../../index.html"><img src="../../img/logo/MMCA.png" alt="logo"></a>
+      </div>
+
+      <nav>
+        <ul class="menu">
+          <li class="has-sub">
+            <a href="#">전시</a>
+            <ul class="submenu">
+              <li><a href="../exhibition.html">현재전시</a></li>
+              <li><a href="#">예정전시</a></li>
+              <li><a href="#">지난전시</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#">프로그램</a>
+            <ul class="submenu">
+              <li><a href="../../education/education.html">교육</a></li>
+              <li><a href="../../workshop/workshop.html">워크샵</a></li>
+            </ul>
+          </li>
+          <li><a href="#">스토리</a></li>
+          <li class="has-sub">
+            <a href="#">관람안내</a>
+            <ul class="submenu">
+              <li><a href="#">서울</a></li>
+              <li><a href="#">과천</a></li>
+              <li><a href="#">덕수궁</a></li>
+              <li><a href="#">청주</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="icons">
+        <li class="language">
+          <a href="#"><img src="../../img/icon/language.png" alt="language"></a>
+          <p><a href="#">Language</a></p>
+        </li>
+        <li class="search">
+          <a href="#"><img src="../../img/icon/search.png" alt="search"></a>
+          <p><a href="#">Search</a></p>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 🔽 header 밖으로 빼야 화면 전체 너비 가능 -->
+  <div class="search-box">
+    <form action="#" method="get">
+      <div class="search-container">
+        <input type="text" placeholder="검색어를 입력하세요.">
+        <button type="submit"><img src="../../img/icon/search.png" alt="검색"></button>
+      </div>
+    </form>
+  </div>
+
+    <!-- 배너 영역 -->
+    <section class="banner">
+        <div class="inner">
+            <!-- 오른쪽 포스터 -->
+            <div class="right-img">
+                <img src="../../img/today_exh/Here_and_Now.png" alt="젊은 모색 포스터">
+                <p class="view-link"><a href="javascript:void(0)" onclick="openPopup()">예약하기</a></p>
+            </div>
+
+            <!-- 왼쪽 소개 텍스트 -->
+            <div class="left-text">
+                <div class="lst">
+                    <div class="bar"></div>
+                    <div class="txt">전시</div>
+                </div>
+
+                <div class="left-text-title">
+                    <h2>젊은 모색<br><span>2025 : 지금, 여기</span></h2>
+                    <p class="desc">
+                        국립현대미술관은 신진 작가 발굴 및 지원을 위한<br>
+                        정례 전시 프로그램 ‘젊은 모색’의 2025년을 개최합니다.<br>
+                        1981년 시작된 ‘젊은 모색’은 국내 미술계 주요 작가 배출<br>
+                        프로그램으로, 현재 현대미술의 미래를 이끌 작가 20인이 참여해<br>
+                        실험적인 도전과제 탐색을 선보입니다. 전시를 통해 동시대<br>
+                        미술의 흐름 속 새로운 감각과 진화 경향을 만나시기 바랍니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUIDE + VIEW POINT -->
+    <section class="content-section">
+        <div class="inner">
+            <div class="guide">
+                <h3>GUIDE</h3>
+                <p><strong>기간</strong><br>2025.04.24 ~ 2025.10.12</p>
+                <p><strong>장소</strong><br>과천 1층, 1ㆍ2 전시실, 중앙홀</p>
+                <p><strong>관람료</strong><br>3,000원</p>
+                <p><strong>작가</strong><br>
+                    강나영, 권동현×권세정,김을지로김진희,다이애나랩,무니페리 상희<br>송예환,야광,업체eobchae 이은희,
+                    장한나,정주원,조한나
+                </p>
+            </div>
+
+            <div class="viewpoint">
+                <h3>VIEW POINT</h3>
+                <div class="vp-item">
+                    <img src="../../img/exhibition_deps_img/arttt_Here_and_Now 1.jpg" alt="전시 이미지1">
+                    <p>기술 너머, 관계의 재구성</p>
+                </div>
+                <div class="vp-item">
+                    <img src="../../img/exhibition_deps_img/arttt_Here_and_Now 2.jpg" alt="전시 이미지2">
+                    <p>다양한 주제를 위한 새로운 서사</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="reserve-overlay" id="reservePopup" onclick="closePopup()">
+        <div class="reserve-box" onclick="event.stopPropagation()">
+            <h2>예약하기</h2>
+
+            <label for="name">이름</label>
+            <input type="text" id="name" placeholder="이름을 입력하세요">
+
+            <label for="phone">연락처</label>
+            <input type="text" id="phone" placeholder="연락처를 입력하세요">
+
+            <label for="date">날짜 선택</label>
+            <input type="date" id="date">
+
+            <label for="time">시간 선택</label>
+            <select id="time">
+                <option>오전 10:00</option>
+                <option>오후 1:00</option>
+                <option>오후 3:00</option>
+            </select>
+
+            <label>인원 선택</label>
+            <div class="people-counter">
+                <span class="minus">−</span>
+                <span id="peopleCount">1</span>
+                <span class="plus">+</span>
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 개인정보 수집에 동의합니다
+                </label>
+            </div>
+
+            <button onclick="submitReservation()">예약 완료</button>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <a href="../../index.html"><img src="../../img/logo/MMCA.png" alt="국립현대미술관 로고" class="footer-logo"></a>
+                <ul class="footer-info">
+                    <li>대표자: 김성희, 사업자등록번호: 138-83-00313</li>
+                    <li>대표전화: (서울) 02-3701-9500, (과천) 02-2188-6000,</li>
+                    <li>(덕수궁) 02-2022-0600, (청주) 043-261-1400</li>
+                    <li>ⓒ 2021 National Museum of Modern and Contemporary Art, Korea</li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <img src="../../img/icon/mark.png" alt="웹접근성 품질마크" class="footer-wa">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <span>NATIONAL MUSEUM OF MODERN AND CONTEMPORARY ART, KOREA &nbsp; 국립 현대 미술관 &nbsp;</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

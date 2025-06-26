@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+/* Font */
+@font-face {
+  font-family: 'suit';
+  src: url(../../font/SUIT-otf/SUIT-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'wensley';
+  src: url(../../font/Wensley/WensleyDemo.ttf) format('opentype');
+}
+
+
+
+
+body {
+  font-family: 'suit', sans-serif;
+  background: #fff;
+}
+
+
+/* ===== Main Visual ===== */
+.main-visual {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.visual-bg {
+  width: 100%;
+  height: 100%;
+  background: url('../../img/subpage_banner/exhibition_ban.webp') no-repeat center center;
+  background-size: cover;
+}
+
+.visual-wrap {
+  width: 1240px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+.visual-text {
+  position: absolute;
+  bottom: 10%;
+  left: 0%;
+  color: white;
+  text-align: left;
+}
+
+.lst {
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.bar {
+  float: left;
+  width: 6px;
+  height: 24px;
+  background: #428EFF;
+  margin-right: 10px;
+}
+
+.txt {
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.lst::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.visual-text h2 {
+  font-size: 48px;
+  font-weight: normal;
+  font-family: 'Wensley';
+}
+
+/* ===== Filter ===== */
+.filter-wrap {
+  width: 1240px;
+  margin: 40px auto 20px;
+  overflow: hidden;
+}
+
+.tab {
+  float: left;
+  margin-left: 15px;
+}
+
+.location-filter {
+  float: right;
+
+}
+
+.tab span {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+.location-filter span {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+.tab span.on,
+.location-filter span.on {
+  border-bottom: 3px solid #428EFF;
+  color: #428EFF;
+  font-weight: bold;
+}
+
+/* ===== Exhibition Items ===== */
+.exhibition-items {
+  width: 1240px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.exh-item {
+  float: left;
+  width: 290px;
+  margin-right: 26.6px;
+  margin-bottom: 40px;
+  background: #f8f8f8;
+  padding: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  min-height: 520px;
+}
+
+.exh-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.exh-item a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.exh-item img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.exh-item .loc {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #404040;
+}
+
+.exh-item .title {
+  font-size: 16px;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.exh-item .date {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #666;
+}
+
+
+
+
+/* pager /////////////////////////////////// */
+.pager {
+  width: 1240px;
+  margin: 30px auto 100px;
+  text-align: right;
+  /* 왼쪽 -> 오른쪽 정렬로 변경 */
+}
+
+.pager ul {
+  display: inline-block;
+}
+
+.pager li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.pager li a {
+
+  padding: 8px 11px;
+  color: #333;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.pager li.on a {
+  color: #428EFF;
+  font-weight: bold;
+}
+
+.pager li.prev a,
+.pager li.next a {
+  font-weight: bold;
+}

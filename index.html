@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국립현대미술관 | INDEX</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <!-- footer도 css 분리하세요! -->
+
+  <script src="script/jquery-1.12.4.min.js"></script>
+  <script src="script/search.js"></script>
+  <script src="script/main_banner.js"></script>
+  <script src="script/exhibition.js"></script>
+  <script src="script/program.js"></script>
+  <script src="script/footer_marquee.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+  <header>
+    <header>
+      <div class="header-wrap">
+        <div class="logo">
+          <a href="#"><img src="img/logo/MMCA.png" alt="logo"></a>
+        </div>
+
+        <nav>
+          <ul class="menu">
+            <li class="has-sub">
+              <a href="#">전시</a>
+              <ul class="submenu">
+                <li><a href="exhibition/exhibition.html">현재전시</a></li>
+                <li><a href="#">예정전시</a></li>
+                <li><a href="#">지난전시</a></li>
+              </ul>
+            </li>
+            <li class="has-sub">
+              <a href="#">프로그램</a>
+              <ul class="submenu">
+                <li><a href="education/education.html">교육</a></li>
+                <li><a href="workshop/workshop.html">워크샵</a></li>
+              </ul>
+            </li>
+            <li><a href="story/stroy.html">스토리</a></li>
+            <li class="has-sub">
+              <a href="#">관람안내</a>
+              <ul class="submenu">
+                <li><a href="#">서울</a></li>
+                <li><a href="#">과천</a></li>
+                <li><a href="#">덕수궁</a></li>
+                <li><a href="#">청주</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="icons">
+          <li class="language">
+            <a href="#"><img src="img/icon/language.png" alt="language"></a>
+            <p><a href="#">Language</a></p>
+          </li>
+          <li class="search">
+            <a href="#"><img src="img/icon/search.png" alt="search"></a>
+            <p><a href="#">Search</a></p>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="search-box">
+      <form action="#" method="get">
+        <div class="search-container">
+          <input type="text" placeholder="검색어를 입력하세요.">
+          <button type="submit"><img src="img/icon/search.png" alt="검색"></button>
+        </div>
+      </form>
+    </div>
+
+<!-- 슬라이드 영역 -->
+<section class="main-slider">
+  <div class="slides">
+    <div class="slide active">
+      <a href="exhibition/exhibition_deps/exhibtion_deps.html">
+        <div class="slide-text">
+          <div class="info">
+            <h2>젊은 모색 2025: 지금, 여기</h2>
+            <p><span>과천</span> 2025.04.24 ~ 2025.10.12</p>
+          </div>
+        </div>
+        <div class="slide-num">01</div>
+      </a>
+    </div>
+
+    <div class="slide">
+      <a href="#">
+        <div class="slide-text">
+          <div class="info">
+            <h2>론 뮤익</h2>
+            <p><span>서울</span> 2025.04.11 ~ 2025.07.13</p>
+          </div>
+        </div>
+        <div class="slide-num">02</div>
+      </a>
+    </div>
+
+    <div class="slide">
+      <a href="#">
+        <div class="slide-text">
+          <div class="info">
+            <h2>수채: 물을 그리다</h2>
+            <p><span>청주</span> 2025.03.21 ~ 2025.09.07</p>
+          </div>
+        </div>
+        <div class="slide-num">03</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <section class="exhibition">
+
+      <div class="title-box">
+        <h2><a href="exhibition/exhibition.html">EXHIBITION</a></h2>
+        <p>현재 진행중인 전시</p>
+      </div>
+
+      <!-- <div class="tab">
+
+      <ul>
+        <li class="on"><a href="">현재 전시</a></li>
+        <li><a href="">예정 전시</a></li>
+        <li><a href="">지난 전시</a></li>
+      </ul>
+
+      <span class="on">현재 전시</span>
+      <span>예정 전시</span>
+      <span>지난 전시</span>
+    </div> -->
+
+      <div class="content-box exh-frame">
+
+        <!-- 슬라이드 트랙 -->
+        <!-- 
+      .exh-scroll : 슬라이드가 실제 보여지는 공간
+      .exh-scroll .exh-track : 전체를 담는 부모 (움직이는 대상!)
+      .exh-scroll .exh-track .exh-item : 각 슬라이드
+       -->
+        <div class="exh-scroll">
+          <div class="exh-track clear">
+
+            <!-- 왼쪽 여백 -->
+            <div class="exh-blank"></div>
+
+            <!-- 포스터 8개 -->
+            <div class="exh-item">
+              <a href="exhibition/exhibition_deps/exhibtion_deps.html">
+                <img src="img/today_exh/Here_and_Now.png" alt="젊은 모색">
+                <div class="info-box">
+                  <p class="loc">과천</p>
+                  <p class="title">젊은 모색 2025 : 지금, 여기</p>
+                  <p class="date">2025.04.24 ~ 2025.10.12</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="exh-item">
+              <a href="#">
+                <img src="img/today_exh/ronmueck.png" alt="론 뮤익">
+                <div class="info-box">
+                  <p class="loc">서울</p>
+                  <p class="title">론 뮤익</p>
+                  <p class="date">2025.04.04 ~ 2025.07.13</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="exh-item">
+              <a href="#">
+                <img src="img/today_exh/Five_Transformative.png" alt="열린공간7">
+                <div class="info-box">
+                  <p class="loc">서울</p>
+                  <p class="title">열린공간7 «우리를 바꾸는 다섯<br>가지 대화»</p>
+                  <p class="date">2025.04.04 ~ 2025.07.13</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="exh-item">
+              <a href="#">
+                <img src="img/today_exh/MMCA_Collection.png" alt="하이라이트">
+                <div class="info-box">
+                  <p class="loc">서울</p>
+                  <p class="title">MMCA 서울 상설전<br>«한국현대미술 하이라이트»</p>
+                  <p class="date">2025.05.01 ~ 2026.05.03</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="exh-item">
+              <a href="#">
+                <img src="img/today_exh/MMCA_Forest.png" alt="전시5">
+                <div class="info-box">
+                  <p class="loc">서울</p>
+                  <p class="title">MMCA 다원예술 2025: 숲</p>
+                  <p class="date">2025.05.23 ~ 2026.01.15</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="exh-item">
+              <a href="#">
+                <img src="img/today_exh/The_Modern_and_Contemporary.png" alt="전시6">
+                <div class="info-box">
+                  <p class="loc">덕수궁</p>
+                  <p class="title">초현실주의와 한국근대미술</p>
+                  <p class="date">2025.04.17 ~ 2027.07.06</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="exh-item">
+              <a href="#">
+                <img src="img/today_exh/MMCA_Collection_Korean_Modern.png" alt="전시7">
+                <div class="info-box">
+                  <p class="loc">과천</p>
+                  <p class="title">MMCA 과천 상설전<br> «한국근현대미술 I»</p>
+                  <p class="date">2025.05.01 ~ 2027.06.27</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="exh-item">
+              <a href="#">
+                <img src="img/today_exh/Color_of_water.jpg" alt="전시8">
+                <div class="info-box">
+                  <p class="loc">과천</p>
+                  <p class="title">MMCA 소장품 기획전<br>- 수채(水彩): 물을 그리다</p>
+                  <p class="date">2025.03.21 ~ 2027.09.07</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- 오른쪽 여백 -->
+            <div class="exh-blank"></div>
+
+          </div>
+        </div>
+
+
+
+        <!-- 좌측 버튼 -->
+        <button class="scroll-btn prev">
+          <img src="img/arrow/arrow_left.png" alt="이전">
+        </button>
+
+        <!-- 우측 버튼 -->
+        <button class="scroll-btn next">
+          <img src="img/arrow/arrow_right.png" alt="다음">
+        </button>
+
+
+      </div>
+    </section>
+
+    <!-- 프로그램 ////////////////////////////////// -->
+
+    <section class="program">
+      <div class="overlay"></div>
+
+      <div class="title-box">
+        <h2>PROGRAM</h2>
+        <p>현재 진행중인 프로그램</p>
+      </div>
+
+      <div class="program-tab">
+        <div class="tab-btn-wrap">
+          <a href="#" class="tab-btn edu active">교육</a>
+          <a href="#" class="tab-btn work">워크샵</a>
+        </div>
+      </div>
+
+      <div class="program-wrap">
+        <!-- 교육 박스 -->
+        <div class="edu-box" id="edu">
+          <div class="program-photo">
+            <div class="main-photo">
+              <img id="main-edu" src="img/education/education1.jpg" alt="교육 대표 이미지">
+              <a href="#" class="arrow edu-next">
+                <img src="img/education/arrow.png" alt="다음">
+              </a>
+            </div>
+          </div>
+          <div class="program-desc">
+            <div class="program-inner">
+              <h3>EDUCATION</h3>
+              <p class="subtitle">특별 교육 ↗</p>
+              <p class="description">
+                유아부터 성인까지 다양한 참여자가 현대미술을 경험하고<br>
+                사회와 소통할 수 있도록 모두를 위한 열린 교육 프로그램을 운영합니다.
+              </p>
+              <div class="thumbs edu-thumbs">
+                <img src="img/education/education2.jpg" class="thumb">
+                <img src="img/education/education3.jpg" class="thumb">
+                <img src="img/education/education4.jpg" class="thumb">
+              </div>
+            </div>
+            <p class="reserve-btn">
+              <a href="education/education.html"><span>더보기</span></a>
+            </p>
+          </div>
+        </div>
+
+        <!-- 워크샵 박스 -->
+        <div class="work-box" id="workshop" style="display: none;">
+          <div class="program-photo">
+            <div class="main-photo">
+              <img id="main-work" src="img/workshop/artsalong1.jpg" alt="워크샵 대표 이미지">
+              <a href="#" class="arrow work-next">
+                <img src="img/workshop/arrow.png" alt="다음">
+              </a>
+            </div>
+          </div>
+          <div class="program-desc">
+            <div class="program-inner">
+              <h3>WORKSHOP</h3>
+              <p class="subtitle">워크샵 ↗</p>
+              <p class="description">
+                현대미술에 기반한 창의적 체험 활동을 통해 참여자들이<br>
+                능동적으로 작품을 이해하고 소통할 수 있도록 돕는 워크샵을 운영합니다.
+              </p>
+              <div class="thumbs work-thumbs">
+                <img src="img/workshop/artsalong2.jpg" class="thumb">
+                <img src="img/workshop/artsalong3.jpg" class="thumb">
+                <img src="img/workshop/artsalong4.jpg" class="thumb">
+              </div>
+            </div>
+            <p class="reserve-btn">
+              <a href="workshop/workshop.html"><span>더보기</span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <section class="story">
+      <div class="center-content">
+        <h2><a href="#">STORY</a></h2>
+        <p>
+          국립현대미술관은 작품이 만들어지기까지의 배경과 작가의 의도를 소개하여,<br>
+          관람자가 단순한 감상을 넘어 예술과 깊이 있게 연결될 수 있도록 합니다.
+        </p>
+        <a href="story/stroy.html" class="btn-more">자세히 보기</a>
+      </div>
+
+      <div class="artists">
+        <!-- 최정화 -->
+        <div class="artist choi">
+          <img src="img/artist/choijeonghwa_black.png" alt="최정화">
+          <p class="info">Choi Jeong Hwa<br><span>최정화</span></p>
+        </div>
+
+        <!-- 서도호 -->
+        <div class="artist seo">
+          <div class="photo">
+            <img src="img/artist/seodoho_black.png" alt="서도호">
+          </div>
+          <div class="info">Suh Do Ho<br><span>서도호</span></div>
+        </div>
+
+        <!-- 권하윤 -->
+        <div class="artist kwon">
+          <div class="photo">
+            <img src="img/artist/kwon hayoun_black.png" alt="권하윤">
+          </div>
+          <div class="info">Kwon Ha Youn<br><span>권하윤</span></div>
+        </div>
+
+        <!-- 론뮤익 -->
+        <div class="artist ron">
+          <div class="photo">
+            <img src="img/artist/ronmueck_black.png" alt="론 뮤익">
+          </div>
+          <div class="info">Ron Mueck<br><span>론 뮤익</span></div>
+        </div>
+
+        <!-- 양정욱 -->
+        <div class="artist yang">
+          <img src="img/artist/Yang Jeong-wook_black.png" alt="양정욱">
+          <p class="info">Yang Jung Uk<br><span>양정욱</span></p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- VISIT -->
+    <section class="visit">
+      <div class="overlay"></div>
+
+      <div class="title-box">
+        <h2>VISIT</h2>
+        <p>미술관 관람 안내</p>
+      </div>
+
+      <div class="visit-wrap">
+
+        <div class="visit-box">
+          <img src="img/region-img/Seoul_long.png" alt="서울">
+          <div class="info">
+            <h3>서울</h3>
+            <div class="detail">
+              <p class="time-title">관람 시간</p>
+              <p>월, 화, 목, 금, 일요일 10:00~18:00</p>
+              <p>수, 토요일 10:00~21:00</p>
+              <p>(18:00~21:00 야간개장)</p>
+              <p class="note">※ 휴관일: 1월1일, 설날, 추석</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit-box">
+          <img src="img/region-img/Gwacheon_long.png" alt="과천">
+          <div class="info">
+            <h3>과천</h3>
+            <div class="detail">
+              <p class="time-title">관람 시간</p>
+              <p>화~일 10:00~18:00</p>
+              <p class="note">※ 휴관일: 1월1일, 매주 월요일</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit-box">
+          <img src="img/region-img/Deoksugung_long.jpg" alt="덕수궁">
+          <div class="info">
+            <h3>덕수궁</h3>
+            <div class="detail">
+              <p class="time-title">관람 시간</p>
+              <p>화, 목, 금, 일요일 10:00~18:00</p>
+              <p>수, 토요일 10:00~21:00</p>
+              <p>(18:00~21:00 야간무료)</p>
+              <p class="note">※ 휴관일: 1월1일, 매주 월요일</p>
+              <p class="note">※ 덕수궁 정문 20시 입장 마감</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit-box">
+          <img src="img/region-img/chungju_long.jpg" alt="청주">
+          <div class="info">
+            <h3>청주</h3>
+            <div class="detail">
+              <p class="time-title">관람 시간</p>
+              <p>화~일 10:00~18:00</p>
+              <p>수, 토요일 10:00~21:00</p>
+              <p class="note">※ 휴관일: 1월1일, 매주 월요일</p>
+              <p class="note">※ 청주궁 정문 17시 입장 마감</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <!-- NOTICE 섹션 -->
+    <section class="notice">
+      <div class="title-box">
+        <h2><a href="#">NOTICE</a></h2>
+        <p><a href="#">공지사항</a></p>
+      </div>
+      <ul>
+        <li>
+          <a href="#">
+            <div class="date">
+              <strong>30</strong>
+              <span>2025.05</span>
+            </div>
+            <p class="text">2025 청주관 3기 도슨트 양성프로그램 기초과정 최종 교육생 안내</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="date">
+              <strong>16</strong>
+              <span>2025.05</span>
+            </div>
+            <p class="text">2025 청주관 3기 도슨트 양성프로그램 서류전형 합격자 및 면접 안내</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="date">
+              <strong>15</strong>
+              <span>2025.05</span>
+            </div>
+            <p class="text">2025 대한민국 안전대전환 집중안전점검</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="date">
+              <strong>12</strong>
+              <span>2025.05</span>
+            </div>
+            <p class="text">국립현대미술관 덕수궁 야간개관 실시 안내</p>
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="more">더보기</a>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-wrap">
+        <div class="footer-left">
+          <a href="#"><img src="img/logo/MMCA.png" alt="국립현대미술관 로고" class="footer-logo"></a>
+          <ul class="footer-info">
+            <li>대표자: 김성희, 사업자등록번호: 138-83-00313</li>
+            <li>대표전화: (서울) 02-3701-9500, (과천) 02-2188-6000,</li>
+            <li>(덕수궁) 02-2022-0600, (청주) 043-261-1400</li>
+            <li>ⓒ 2021 National Museum of Modern and Contemporary Art, Korea</li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <img src="img/icon/mark.png" alt="웹접근성 품질마크" class="footer-wa">
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="marquee-wrapper">
+          <div class="marquee-track">
+            <span>NATIONAL MUSEUM OF MODERN AND CONTEMPORARY ART, KOREA &nbsp; 국립 현대 미술관 &nbsp;</span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+</body>
+
+</html>
