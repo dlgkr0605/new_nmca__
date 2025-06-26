@@ -1,0 +1,1126 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'suit';
+  src: url(../font/SUIT-Regular.woff2) format('opentype');
+}
+
+@font-face {
+  font-family: 'loves';
+  src: url('../font/LOVES.woff2') format('opentype');
+}
+
+@font-face {
+  font-family: 'nanum';
+  src: url(../font/NanumMyeongjo.woff2) format('opentype');
+}
+
+@font-face {
+  font-family: 'wensley';
+  src: url(../font/WensleyDemo.woff2);
+}
+
+
+body {
+  font-family: 'suit';
+}
+
+
+/* 슬라이드 /////////////////////////////  */
+
+.main-slider {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 5%;
+  transition: none; /* 초기 버벅임 방지 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+  will-change: width;
+}
+
+.slide.animated {
+  transition: width 0.5s ease;
+}
+
+.slide.active {
+  width: 90%;
+}
+
+.slide:nth-child(1) {
+  background-image: url('../img/main_banner/banner01__.webp');
+}
+.slide:nth-child(2) {
+  background-image: url('../img/main_banner/banner02__.webp');
+}
+.slide:nth-child(3) {
+  background-image: url('../img/main_banner/banner03__.webp');
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: white;
+  display: none;
+}
+.slide.active .slide-text {
+  display: block;
+}
+
+.slide-text h2,
+.slide-text p,
+.slide-text span {
+  font-size: 0; /* 텍스트만 숨김 */
+}
+
+.slide-num {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  transform-origin: center;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  display: block;
+}
+.slide.active .slide-num {
+  display: none;
+}
+
+/* 전시 영역!!!!!!!!!!!!!!! */
+
+.exhibition {
+  padding: 60px 0;
+  background: #fff;
+  text-align: center;
+  position: relative;
+
+}
+
+.exhibition h2 a {
+  font-size: 36px;
+  color: #000;
+  text-decoration: none;
+  color: #404040;
+  font-family: 'loves';
+  font-weight: 600;
+  font-size: 3.125rem;
+  text-align: center;
+}
+
+.exhibition .title-box {
+  margin-bottom: 30px;
+}
+
+.exhibition p {
+  font-size: 18px;
+}
+
+
+.tab {
+  margin: 20px 0;
+  font-family: 'suit';
+}
+
+.tab span {
+  margin: 0 12px;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+  font-family: 'suit';
+}
+
+.tab .on {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3px solid #428EFF;
+  padding-bottom: 5px;
+  color: #404040;
+}
+
+.content-box {
+  /* 내용 전체 덩어리 = 슬라이드가 실제 보여지는 공간과 동일한 너비!! */
+  width: 1240px;
+  margin: 0 auto;
+
+  position: relative;
+  /* button 위치설정! */
+}
+
+.exh-scroll {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  padding-bottom: 20px;
+}
+
+.exh-track {
+  width: 200%;
+}
+
+.exh-item {
+  width: 11.5%;
+  margin: 0 0.5%;
+  float: left;
+  /* flex: 0 0 auto;
+  width: 300px; */
+  background: #fff;
+  box-shadow: 0 2px 12px #ccc;
+  /* padding: 10px; 
+  box-sizing: border-box;*/
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  font-family: 'suit';
+  cursor: pointer;
+
+  /* outline: 1px solid blue; */
+}
+
+
+
+
+.exh-item img {
+  width: 100%;
+  /* border-radius: 4px; */
+  display: block;
+}
+
+.exh-item .info-box {
+  padding: 10px;
+}
+
+.exh-item .loc {
+  font-weight: bold;
+  font-size: 16px;
+  /* margin-top: 10px; */
+  color: #404040;
+}
+
+.exh-item .title {
+  font-size: 18px;
+  /* 최대 2줄을 기준으로 높이설정! */
+  height: 52px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 확인하고 수정하세요 */
+}
+
+.exh-item .date {
+  font-size: 16px;
+  color: #999;
+  margin-top: 16px;
+}
+
+/* 버튼 */
+.scroll-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.scroll-btn img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.scroll-btn.prev {
+  left: -100px;
+}
+
+.scroll-btn.next {
+  right: -100px;
+}
+
+
+
+
+
+
+
+/* 프로그램//////////////////////////////////////// */
+
+
+.program {
+  position: relative;
+  background: url('../img/education/BLUE_WORM_BACKGROUND.png') no-repeat center center;
+  background-size: cover;
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.program .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 97, 181, 0.4);
+  /* 하늘색 반투명 오버레이 */
+  z-index: 1;
+}
+
+.program>*:not(.overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+.program .title-box {
+  margin-bottom: 30px;
+}
+
+.program h2 {
+
+  font-family: 'loves';
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.program p {
+  font-size: 18px;
+}
+
+.program h2 span.k-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  display: block;
+}
+
+.program-tab {
+  width: 1240px;
+  margin: 0 auto 60px;
+  position: relative;
+  height: 48px;
+}
+
+.tab-btn-wrap {
+  width: 100%;
+  height: 100%;
+  border-bottom: 4px solid #b2cde9;
+  font-size: 0;
+}
+
+.tab-btn {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  color: #b2cde9;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  line-height: 20px;
+  font-family: 'suit';
+  font-weight: 600;
+}
+
+.tab-btn.active {
+  color: white;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: white;
+}
+
+.program-wrap {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 탭 콘텐츠 박스 */
+.edu-box,
+.work-box {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.program-photo {
+  display: table-cell;
+  width: 400px;
+  position: relative;
+  vertical-align: top;
+  padding-right: 100px;
+}
+
+.main-photo {
+  position: relative;
+  z-index: 1;
+}
+
+.main-photo::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: #417eaa;
+  z-index: -1;
+}
+
+.main-photo img {
+  width: 100%;
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+}
+
+.arrow img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.program-desc {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 80px;
+  position: relative;
+}
+
+.program-inner {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.program-desc h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: 'loves';
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-family: 'suit';
+}
+
+.description {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 40px;
+  font-family: 'suit';
+}
+
+.thumbs {
+  margin-top: 40px;
+  white-space: nowrap;
+  margin-bottom: 30px;
+}
+
+.thumbs img {
+  width: 130px;
+  margin-right: 20px;
+  vertical-align: top;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.reserve-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.reserve-btn a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.reserve-btn a span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: white;
+}
+
+/* story///////////////////////////////////////////////////////////////////////// */
+
+
+.story {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 880px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.story {
+  font-family: 'suit';
+}
+
+.story::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.center-content h2 {
+
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #404040;
+}
+
+.center-content h2 a {
+  color: #404040;
+  font-size: 3.125rem;
+  font-family: 'wensley';
+}
+
+.center-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #404040;
+  margin-bottom: 20px;
+}
+
+.center-content .btn-more {
+  font-size: 14px;
+  color: #888;
+  text-decoration: none;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 2px;
+}
+
+
+/* artists 섹션 - 텍스트와 이미지 모두 회전 효과 제거 */
+.artists {
+  margin-top: 100px;
+  position: absolute;
+  width: 1240px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.artist::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 공통 이미지 크기 + 효과 */
+.artist img,
+.artist .photo img {
+  width: 150px;
+  display: block;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+}
+
+.artist:hover img,
+.artist:hover .photo img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* 공통 텍스트 스타일 */
+.artist .info {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.artist .info span {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+/* center content 마진 */
+.center-content {
+  margin-top: 100px;
+}
+
+/* ========== 개별 작가 위치 및 정렬 ========== */
+
+.artist.choi {
+  position: absolute;
+  top: 330px;
+  left: 0px;
+  text-align: left;
+}
+
+.artist.choi .info {
+  text-align: left;
+  margin-top: 8px;
+}
+
+.artist.seo {
+  position: absolute;
+  top: 20px;
+  left: 350px;
+  width: 250px;
+}
+
+.artist.seo .photo {
+  float: left;
+  width: 150px;
+}
+
+.artist.seo .info {
+  float: left;
+  margin-left: 10px;
+  width: 80px;
+  text-align: left;
+}
+
+.artist.kwon {
+  position: absolute;
+  top: 100px;
+  right: 40px;
+  width: 280px;
+}
+
+.artist.kwon .photo {
+  float: left;
+  width: 150px;
+}
+
+.artist.kwon .info {
+  float: left;
+  margin-left: 10px;
+  width: 110px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #444;
+  margin-top: 0;
+}
+
+.artist.kwon .info span {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.artist.ron {
+  position: absolute;
+  bottom: 50px;
+  left: 380px;
+  width: 250px;
+}
+
+.artist.ron .photo {
+  float: left;
+  width: 150px;
+}
+
+.artist.ron .info {
+  float: left;
+  margin-left: 10px;
+  width: 80px;
+  text-align: left;
+}
+
+.artist.yang {
+  position: absolute;
+  bottom: 180px;
+  right: 0px;
+  text-align: right;
+}
+
+.artist.yang .info {
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* 자세히보기 버튼 hover 효과 */
+.btn-more {
+  display: inline-block;
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  margin-top: 20px;
+
+}
+
+.btn-more:hover {
+  color: #428EFF;
+  border-color: #428EFF;
+  font-weight: bold;
+
+}
+
+
+
+/* 관람안내 ////////////////// */
+
+.visit {
+  width: 100%;
+  padding: 80px 0 100px 0;
+  text-align: center;
+  margin-top: 150px;
+  font-family: 'suit';
+  clear: both;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 고정 배경을 섹션 안에만 제한 */
+.visit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/region-img/seoul_view3_black.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -2;
+}
+
+/* 기존 반투명 오버레이 */
+.visit .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 96, 214, 0.4);
+  z-index: -1;
+}
+
+/* 오버레이와 배경 제외한 모든 콘텐츠 위로 */
+.visit>*:not(.overlay) {
+  position: relative;
+  z-index: 1;
+}
+
+.visit .title-box {
+  margin-bottom: 30px;
+}
+
+.visit h2 {
+  font-size: 3.125rem;
+  color: white;
+  font-weight: bold;
+  font-family: 'loves';
+}
+
+.visit p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.visit-wrap {
+  width: 1240px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.visit-box {
+  width: 290px;
+  height: 580px;
+  float: left;
+  margin-right: 26px;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.visit-box:last-child {
+  margin-right: 0;
+}
+
+.visit-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.visit-box .info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.visit-box .info h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 2;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.visit-box .detail {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.visit-box .detail p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+
+.visit-box .detail .time-title {
+  font-weight: bold;
+  color: #ccc;
+}
+
+.visit-box .detail .note {
+  margin-top: 10px;
+}
+
+.visit-box:hover img {
+  opacity: 0.1;
+}
+
+.visit-box:hover .detail {
+  opacity: 1;
+}
+
+.visit-box:hover h3 {
+  font-size: 34px;
+}
+
+
+
+
+
+/* artists 섹션 */
+.artists {
+  margin-top: 100px;
+  position: absolute;
+  width: 1240px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.artist::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.artist img,
+.artist .photo img {
+  width: 150px;
+  display: block;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+}
+
+.artist:hover img,
+.artist:hover .photo img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.artist .info {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.artist .info span {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+.center-content {
+  margin-top: 100px;
+}
+
+.artist.choi {
+  position: absolute;
+  top: 330px;
+  left: 0px;
+  text-align: left;
+}
+
+.artist.choi .info {
+  text-align: left;
+  margin-top: 8px;
+}
+
+.artist.seo {
+  position: absolute;
+  top: 20px;
+  left: 350px;
+  width: 250px;
+}
+
+.artist.seo .photo {
+  float: left;
+  width: 150px;
+}
+
+.artist.seo .info {
+  float: left;
+  margin-left: 10px;
+  width: 80px;
+  text-align: left;
+}
+
+.artist.kwon {
+  position: absolute;
+  top: 100px;
+  right: 40px;
+  width: 280px;
+}
+
+.artist.kwon .photo {
+  float: left;
+  width: 150px;
+}
+
+.artist.kwon .info {
+  float: left;
+  margin-left: 10px;
+  width: 110px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #444;
+  margin-top: 0;
+}
+
+.artist.kwon .info span {
+  display: block;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.artist.ron {
+  position: absolute;
+  bottom: 50px;
+  left: 380px;
+  width: 250px;
+}
+
+.artist.ron .photo {
+  float: left;
+  width: 150px;
+}
+
+.artist.ron .info {
+  float: left;
+  margin-left: 10px;
+  width: 80px;
+  text-align: left;
+}
+
+.artist.yang {
+  position: absolute;
+  bottom: 180px;
+  right: 0px;
+  text-align: right;
+}
+
+.artist.yang .info {
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* 자세히보기 버튼 호버 효과 */
+.more {
+  display: inline-block;
+
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.more:hover {
+  color: #428EFF;
+  font-weight: bold;
+}
+
+
+/* NOTICE 섹션 */
+.notice {
+  width: 680px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: 'suit';
+}
+
+.notice .title-box {
+  margin-bottom: 30px;
+}
+
+.notice h2 {
+  font-size: 3.125rem;
+  color: #404040;
+  font-family: 'loves';
+  font-weight: 600;
+}
+
+.notice ul {
+  margin-top: 40px;
+}
+
+.notice li {
+  position: relative;
+  border-top: 1px solid #428EFF;
+  border-bottom: 1px solid #428EFF;
+  text-align: left;
+}
+
+.notice li+li {
+  border-top: none;
+}
+
+.notice li a {
+  display: block;
+  padding: 20px 0 20px 80px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  min-height: 70px;
+  color: #404040;
+  /* 내용 높이 확보 */
+}
+
+/* 날짜 박스 */
+.notice .date {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 60px;
+  line-height: 20px;
+  color: #404040;
+}
+
+.notice .date strong {
+  display: block;
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: #000;
+  line-height: 1;
+}
+
+.notice .date span {
+  font-size: 0.9375rem;
+  color: #888;
+  display: block;
+  margin-top: 5px;
+}
+
+/* 텍스트 박스 */
+.notice .text {
+  font-size: 1.125rem;
+  color: #333;
+  line-height: 4;
+  margin-left: 30px;
+}
+
+/* 더보기 버튼 */
+.notice .more {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #222;
+  text-decoration: none;
+  float: right;
+}
+
+.notice .more:hover {
+  color: #428EFF;
+  font-weight: bold;
+}

@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+
+/* Layout Align Fix */
+.banner .inner,
+.content-section .inner,
+.footer-wrap {
+  width: 1240px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner {
+  background: #81B6FF;
+  padding: 100px 0 120px;
+  min-height: 700px;
+  position: relative;
+}
+
+.left-text {
+  float: left;
+  width: 720px;
+  color: #000;
+  margin-top: 30px;
+}
+
+.guide {
+  float: left;
+  width: 720px;
+  color: #000;
+  margin-top: 100px;
+  margin-left: 10px;
+}
+
+.notice {
+  float: left;
+  width: 720px;
+  color: #000;
+  clear: both;
+  margin-top: 80px;
+}
+
+.right-img {
+  float: right;
+  width: 360px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  transition: top 0.3s ease;
+}
+
+.right-img.fixed {
+  position: fixed !important;
+  top: 120px;
+  right: calc((100% - 1240px) / 2);
+  z-index: 999;
+}
+
+.right-img img {
+  width: 100%;
+  display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.right-img .view-link {
+  margin-top: 12px;
+}
+
+.right-img .view-link a {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+}
+
+.lst {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.lst .bar {
+  float: left;
+  width: 6px;
+  height: 24px;
+  background: #428EFF;
+  margin-right: 10px;
+}
+
+.lst .txt {
+  float: left;
+  font-size: 20px;
+  color: #333;
+  line-height: 24px;
+}
+
+.left-text-title {
+  margin-top: 70px;
+}
+
+.left-text h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.left-text h2 span {
+  font-size: 28px;
+  font-weight: normal;
+  display: block;
+}
+
+.left-text .desc,
+.guide p,
+.notice p {
+  font-size: 18px;
+  line-height: 1.9;
+  word-break: keep-all;
+  margin-bottom: 15px;
+}
+
+.guide h3,
+.notice h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: 'loves';
+  color: #111;
+}
+
+/* Reserve Popup */
+.reserve-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 10000;
+}
+
+.reserve-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.97);
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.reserve-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+
+.reserve-box label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.reserve-box input,
+.reserve-box select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+
+.reserve-box select {
+  appearance: none; /* 기본 화살표 제거 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('../../img/arrow/arrow_low.png') no-repeat right 12px center;
+  background-size: 12px;
+  padding-right: 35px; /* 화살표 공간 확보 */
+}
+
+
+
+
+.people-counter {
+  margin-top: 8px;
+  padding: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  width: 100%;
+  text-align: center;
+}
+
+.people-counter .minus,
+.people-counter .plus {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #428EFF;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20%;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.people-counter #peopleCount {
+  margin: 0 15px;
+  font-size: 16px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.reserve-box .checkbox {
+  margin-top: 20px;
+  margin-left: 25px;
+  font-size: 13px;
+}
+
+
+
+.reserve-box .checkbox input[type="checkbox"] {
+  position: absolute;
+  left: -140px;
+  bottom: 87px;
+}
+
+.reserve-box .checkbox label {
+  display: block;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+/* 버튼 */
+.reserve-box button {
+  margin-top: 20px;
+  width: 100%;
+  background: #428EFF;
+  color: #fff;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reserve-box button:hover {
+  background: #428EFF;
+}
+
